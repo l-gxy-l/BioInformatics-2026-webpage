@@ -387,3 +387,36 @@ README 已改成中英双语版本，中文部分包含：
 当前源码位置：:codex-file-citation{path="D:/documents/Codex/temp/lm-explainer/index.html" purpose="output"}
 
 更新后的压缩包已包含 `ERROR_case.md`、`SESSION_LOG.md` 和网页文件：:codex-file-citation{path="D:/documents/Codex/temp/language-model-explainer.zip" purpose="output"}
+
+> 把错误解决的案例移动到“一次失败提示词，以及修复它的改写”部分
+
+<details><summary>4 previous messages</summary>
+
+> 我会把 `ERROR_case.md` 卡片从采样章节移除，改放到“一次失败提示词，以及修复它的改写”标题下方、提示词记录之前，让它和会话记录形成连续叙事。
+>
+> <details><summary>Created a file, edited 2 files, ran 2 commands</summary>
+>
+> - Wrote `./lm-explainer/index.html` (+8 -7)
+> - Wrote `./lm-explainer/styles.css` (+9 -0)
+> - Wrote `./lm-explainer/qa_case_move.cjs` (+53 -0)
+> - Ran `$node='C:\Users\86152\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe'; & $node --check 'D:\documents\Codex\temp\lm-explainer\script.js'; & $node 'D:\documents\Codex\temp\lm-explainer\qa_case_move.cjs'`
+> - Ran `rg -n 'ERROR_case\.md|id="session-log"|id="sampling"' 'D:\documents\Codex\temp\lm-explainer\index.html'`
+>
+> </details>
+>
+> Viewed 3 images
+>
+> <details><summary>Ran a command</summary>
+>
+> - Ran `$workspace=[System.IO.Path]::GetFullPath('D:\documents\Codex\temp'); $targets=@('D:\documents\Codex\temp\lm-explainer\qa_case_move.cjs','D:\documents\Codex\temp\lm-explainer\qa-case-session-desktop.png','D:\documents\Codex\temp\lm-explainer\qa-case-session-mobile.png','D:\documents\Codex\temp\lm-explainer\qa-case-link.png'); foreach($target in $targets){ $full=[System.IO.Path]::GetFullPath($target); if(-not $full.StartsWith($workspace,[System.StringComparison]::OrdinalIgnoreCase)){ throw "Unsafe cleanup target: $full" }; if(Test-Path -LiteralPath $full){ Remove-Item -LiteralPath $full -Force } }; $site='D:\documents\Codex\temp\lm-explainer'; $zip='D:\documents\Codex\temp\language-model-explainer.zip'; if(Test-Path -LiteralPath $zip){ Remove-Item -LiteralPath $zip -Force }; Compress-Archive -LiteralPath @((Join-Path $site 'index.html'),(Join-Path $site 'styles.css'),(Join-Path $site 'script.js'),(Join-Path $site 'SESSION_LOG.md'),(Join-Path $site 'ERROR_case.md'),(Join-Path $site 'README.md')) -DestinationPath $zip -CompressionLevel Optimal; Get-Item -LiteralPath $zip | Select-Object FullName,Length,LastWriteTime`
+>
+> </details>
+> </details>
+
+已把 `ERROR_case.md` 案例链接从采样章节移到“One failed prompt, and the revision that fixed it / 一次失败提示词，以及修复它的改写”部分，位置在说明文字下方、提示词记录上方。
+
+中英文标签和桌面、手机端布局均已检查，链接仍在新标签页打开。
+
+源码：:codex-file-citation{path="D:/documents/Codex/temp/lm-explainer/index.html" purpose="output"}
+
+更新后的压缩包：:codex-file-citation{path="D:/documents/Codex/temp/language-model-explainer.zip" purpose="output"}

@@ -1456,6 +1456,11 @@ a {
   font-size: 8px;
 }
 
+.session-log > .case-study-link {
+  width: min(100%, 460px);
+  margin: -18px 0 38px auto;
+}
+
 .sampling-context {
   margin-bottom: 28px;
   padding: 16px 18px;
@@ -2128,6 +2133,10 @@ html[lang="zh-CN"] .sample-result strong {
 
   .prompt-log {
     grid-template-columns: 1fr;
+  }
+
+  .session-log > .case-study-link {
+    margin: 24px 0 32px;
   }
 
   .prompt-entry {
