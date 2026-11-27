@@ -169,6 +169,29 @@ a {
   box-shadow: 0 1px 0 var(--accent);
 }
 
+.header-resource-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 5px 9px;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  background: rgba(255, 255, 255, 0.24);
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.header-resource-link:hover {
+  border-color: var(--accent);
+  color: var(--ink);
+  background: rgba(239, 106, 58, 0.12);
+}
+
 .language-switch {
   display: inline-grid;
   grid-template-columns: 1fr 1fr;
@@ -1388,6 +1411,51 @@ a {
   font-size: 11px;
 }
 
+.case-study-link {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: center;
+  margin-top: 28px;
+  padding: 17px 18px;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  background: var(--paper);
+  text-decoration: none;
+  transition: color 180ms ease, background 180ms ease, transform 180ms var(--ease);
+}
+
+.case-study-link:hover {
+  color: var(--ink);
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.case-study-label {
+  font-family: var(--mono);
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+}
+
+.case-study-link > span:last-child {
+  display: grid;
+  gap: 3px;
+}
+
+.case-study-link strong {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.case-study-link small {
+  color: var(--ink-soft);
+  font-family: var(--mono);
+  font-size: 8px;
+}
+
 .sampling-context {
   margin-bottom: 28px;
   padding: 16px 18px;
@@ -1882,6 +1950,13 @@ html[lang="zh-CN"] .sample-result strong {
     min-width: 0;
     flex: 1;
     padding: 7px;
+  }
+
+  .header-resource-link {
+    flex: 0 0 auto;
+    min-height: 34px;
+    padding: 5px 7px;
+    font-size: 7px;
   }
 
   .identity label span {

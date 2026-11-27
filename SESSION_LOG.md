@@ -338,3 +338,52 @@ README 已改成中英双语版本，中文部分包含：
 :codex-file-citation{path="D:/documents/Codex/temp/lm-explainer/README.md" purpose="output"}
 
 :codex-file-citation{path="D:/documents/Codex/temp/language-model-explainer.zip" purpose="output"}
+
+> 接下来把这些github上的额外文件连到web上去
+> 把错误解决的案例"https://github.com/l-gxy-l/BioInformatics-2026-webpage/blob/main/ERROR_case.md"做个链接，放到“下一个 token 是一个选择，不是藏在模型里的答案。”主题下
+> 把对话记录“How you build it”"https://github.com/l-gxy-l/BioInformatics-2026-webpage/blob/main/SESSION_LOG.md"做个链接，放在网页顶部，在学号、姓名左侧
+
+<details><summary>6 previous messages</summary>
+
+> 我会直接把两个 GitHub 文件链接写入页面：顶部作者信息区左侧放 `How you build it / SESSION_LOG.md`，采样章节内放 `ERROR_case.md` 案例入口，并补齐双语文案和新窗口安全属性。
+>
+> <details><summary>Created a file, edited 3 files</summary>
+>
+> - Wrote `./lm-explainer/index.html` (+11 -0)
+> - Wrote `./lm-explainer/script.js` (+6 -0)
+> - Wrote `./lm-explainer/styles.css` (+75 -0)
+> - Wrote `./lm-explainer/qa_links.cjs` (+55 -0)
+>
+> </details>
+>
+> 两个链接已加入。现在我在检查桌面和手机顶栏是否被新增的 “How you build it” 入口挤压，并确认采样章节中的案例卡片布局正常、链接地址完全一致。
+>
+> <details><summary>Ran 2 commands</summary>
+>
+> - Ran `$node='C:\Users\86152\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe'; & $node --check 'D:\documents\Codex\temp\lm-explainer\script.js'; & $node 'D:\documents\Codex\temp\lm-explainer\qa_links.cjs'`
+> - Ran `rg -n 'SESSION_LOG\.md|ERROR_case\.md|sessionLogLink|caseStudyTitle' 'D:\documents\Codex\temp\lm-explainer\index.html' 'D:\documents\Codex\temp\lm-explainer\script.js'`
+>
+> </details>
+>
+> Viewed 3 images
+>
+> <details><summary>Ran 4 commands</summary>
+>
+> - Ran `Get-Content 'D:\documents\Codex\temp\lm-explainer\index.html' | Select-Object -Skip 22 -First 14`
+> - Ran `$workspace=[System.IO.Path]::GetFullPath('D:\documents\Codex\temp'); $targets=@('D:\documents\Codex\temp\lm-explainer\qa_links.cjs','D:\documents\Codex\temp\lm-explainer\qa-links-header-en.png','D:\documents\Codex\temp\lm-explainer\qa-links-header-mobile.png','D:\documents\Codex\temp\lm-explainer\qa-links-sampling-en.png'); foreach($target in $targets){ $full=[System.IO.Path]::GetFullPath($target); if(-not $full.StartsWith($workspace,[System.StringComparison]::OrdinalIgnoreCase)){ throw "Unsafe cleanup target: $full" }; if(Test-Path -LiteralPath $full){ Remove-Item -LiteralPath $full -Force } }; $site='D:\documents\Codex\temp\lm-explainer'; $zip='D:\documents\Codex\temp\language-model-explainer.zip'; if(Test-Path -LiteralPath $zip){ Remove-Item -LiteralPath $zip -Force }; Compress-Archive -LiteralPath @((Join-Path $site 'index.html'),(Join-Path $site 'styles.css'),(Join-Path $site 'script.js'),(Join-Path $site 'SESSION_LOG.md'),(Join-Path $site 'README.md')) -DestinationPath $zip -CompressionLevel Optimal; Get-Item -LiteralPath $zip | Select-Object FullName,Length,LastWriteTime; Get-ChildItem -Force $site | Select-Object Name,Length`
+> - Ran `Get-ChildItem -Force 'D:\documents\Codex\temp\lm-explainer' | Format-Table Name,Length,LastWriteTime -AutoSize; rg -n 'https://github.com/l-gxy-l/BioInformatics-2026-webpage/blob/main/(ERROR_case|SESSION_LOG)\.md' 'D:\documents\Codex\temp\lm-explainer\index.html'`
+> - Ran `$site='D:\documents\Codex\temp\lm-explainer'; $zip='D:\documents\Codex\temp\language-model-explainer.zip'; if(Test-Path -LiteralPath $zip){ Remove-Item -LiteralPath $zip -Force }; Compress-Archive -LiteralPath @((Join-Path $site 'index.html'),(Join-Path $site 'styles.css'),(Join-Path $site 'script.js'),(Join-Path $site 'SESSION_LOG.md'),(Join-Path $site 'ERROR_case.md'),(Join-Path $site 'README.md')) -DestinationPath $zip -CompressionLevel Optimal; Add-Type -AssemblyName System.IO.Compression.FileSystem; [System.IO.Compression.ZipFile]::OpenRead($zip).Entries | Select-Object FullName,Length; Get-Item -LiteralPath $zip | Select-Object FullName,Length`
+>
+> </details>
+> </details>
+
+两个 GitHub 链接已接入网页：
+
+- `How you build it / 构建记录` 链接已放在网页顶部、姓名和学号左侧。
+- `ERROR_case.md` 已作为案例卡片放在“The next token is a choice…”采样章节下方。
+- 两个链接都会在新标签页打开，并已加入中英文文案。
+- 已验证桌面端和手机端布局，没有横向溢出。
+
+当前源码位置：:codex-file-citation{path="D:/documents/Codex/temp/lm-explainer/index.html" purpose="output"}
+
+更新后的压缩包已包含 `ERROR_case.md`、`SESSION_LOG.md` 和网页文件：:codex-file-citation{path="D:/documents/Codex/temp/language-model-explainer.zip" purpose="output"}
